@@ -31,7 +31,7 @@ if [ -d "okx-best-route" ]; then
     cd okx-best-route
     git pull
 else
-    git clone https://github.com/yourusername/okx-best-route.git
+    git clone https://github.com/Reboot7454/okx-best-route.git
     cd okx-best-route
 fi
 
