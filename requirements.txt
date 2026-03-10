@@ -1,0 +1,30 @@
+# OKX BEST ROUTE - Python依赖
+
+## 说明
+
+本项目使用 **Python 3.8+ 标准库**，**零第三方依赖**！
+
+所有功能仅依赖 Python 内置模块：
+- `os`, `sys`, `json`
+- `base64`, `hmac`, `hashlib`
+- `urllib.parse`, `urllib.request`
+- `datetime`, `typing`, `dataclasses`
+- `argparse`
+
+## 安装
+
+无需安装任何依赖，直接运行：
+
+```bash
+python3 best_route.py
+```
+
+## Python版本要求
+
+- **最低**: Python 3.8
+- **推荐**: Python 3.10+
+
+检查Python版本：
+```bash
+python3 --version
+```
