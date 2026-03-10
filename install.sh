@@ -15,12 +15,6 @@ fi
 
 echo "✅ 找到OpenClaw目录"
 
-# 检查okx-dex技能是否存在（依赖）
-if [ ! -d "$OPENCLAW_SKILLS/okx-dex" ]; then
-    echo "⚠️ 警告: 未找到okx-dex技能"
-    echo "请先安装OKX DEX技能，或确保已配置OKX API"
-fi
-
 # 进入skills目录
 cd "$OPENCLAW_SKILLS"
 
@@ -48,16 +42,18 @@ else
     echo "请创建配置文件: $CRED_FILE"
     echo "内容格式:"
     echo "OKX_API_KEY=你的API_KEY"
-    echo "OKX_SECRET_KEY=你的SECRET_KEY"
+    echo "OKX_API_SECRET=你的SECRET_KEY"
     echo "OKX_PASSPHRASE=你的PASSPHRASE"
     echo ""
+    echo "⚠️ 重要: 需要申请 OKX Web3 DEX API Key (不是交易所API)"
     echo "获取方式: https://www.okx.com/account/my-api"
+    echo "权限选择: Web3 DEX (不要选交易权限)"
 fi
 
 # 测试运行
 echo ""
 echo "🧪 测试运行..."
-python3 best_route.py 2>&1 | head -5
+python3 best_route.py --help 2>&1 | head -10
 
 echo ""
 echo "✅ 安装完成！"
